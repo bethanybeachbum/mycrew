@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %} <!-- loads extra functionality -->
+
+
+
+{% block page_title  %}
+  The Great Applachain Gap (GAP) Adventure Blog
+{% endblock %}   
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static "blog/post.css" %}">
+<link rel="stylesheet" href="{% static "blog/index.css" %}">
+<!-- <link rel="stylesheet" href="{% static "blog/includes/header.css" %}"> -->
+{% endblock %}
+<!-- -->
+{% block content  %}
+
+
+<section id="welcome">
+  <header>
+    <img src="{% static "blog/images/M+L_VT_bike.jpg" %}" alt="Mark - The Author of this blog" />
+    <div>
+    <h2>Biking the GAP</h2>
+    <h3>Blog by Mark Brown</h3> 
+    </div>
+  </header>
+  <p>Welcome the the blog about the Great Allegheny Passageway.</p>
+</section>
+
+<section id="latest-posts">
+  <header>
+    
+    <!-- <img src="{% static "blog/images/Mark_pushup_sm.jpg" %}" alt="Mark - The Author of this blog" />  -->
+    
+    <h2>Our Latest Thoughts </h2> 
+    <ul>
+      {% for post in posts %} <!-- posts is a key from the starting_page view -->
+      {% include "blog/includes/post.html" %} 
+      {% endfor %}
+        
+    </ul>
+  </header>
+  <p>This is a recounting of our crew's experience preparing and biking the GAP.</p>
+</section>
+
+<section id="about">
+  <h2>Who We Are</h2>
+    <p>We are four bikers from Southern Delaware trying to stay in shape and have some fun along the way.</p>
+    <p>C. Hurst - Known for his triathelete competancy.  Tremendous skill set in construction and renovation around the home and at business.</p>
+    <p>Carl Roberts - Avid biker and a renowned physical therapist.</p>
+    <p>Rob Halminski - A world traveler to the far reaches of the world - Jungles of Africa to Mountains of Peru. Gardener and cat enthusiast.</p>
+    <p>Mark Brown - Biker, tennis player and lousy guitarist.  Gardener and software coder when not hanging out with his grandkids.</p> 
+</section>
+
+{% endblock %}
