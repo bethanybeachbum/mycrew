@@ -1,0 +1,11 @@
+li a { 
+    color: green;
+}
+
+body {
+    background:   rgb(175, 225, 204) url("images/vote.jpeg") no-repeat;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
